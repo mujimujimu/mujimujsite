@@ -1,0 +1,405 @@
+body{
+	font-size:1.6rem;
+	letter-spacing: 0.1rem;
+	line-height:1.6;
+	overflow: auto !important;}
+
+
+
+/* =========================
+　h1＝トップのサイトタイトル
+　h2＝各セクションタイトル（ILLUSTとかOFFLINEとか）
+　========================= */
+h1{
+	font-size:12rem;
+	line-height:16rem;
+	letter-spacing:0.4rem;}
+
+h2{
+	font-size:5rem;
+	margin-bottom:4rem;
+	letter-spacing:0.5rem;}
+
+/* ↓各セクションの余白 */
+section{
+	padding:10rem 6rem; /* ←上下　左右　の順 */
+	position:relative; }
+
+.wrapper{
+	max-width:90rem; /* コンテンツエリアの最大幅を指定 */
+	margin:0 auto;
+	position: relative;}
+
+
+/* ↓Twitterとかへのリンクボタン */
+.btn{
+	background-color:#fff;
+	color:#9f9fab;
+	text-align:center;
+	border:solid 2px #9f9fab; }
+	
+.btn:hover{
+	transition: all 0.3s ease;
+	border:solid 2px #dbdbe3;
+	background-color:#dbdbe3;
+	color:#fff;}
+
+
+/* =========================
+　メニュー部分の設定
+　========================= */
+header{
+	height:16rem;
+	padding:0 6rem;
+	color:#fff;
+	background:linear-gradient( to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4), rgba(0,0,0,0.1),rgba(0,0,0,0));}
+
+header h1 a{
+	color:#fff;
+	font-weight: normal;}
+
+nav{
+	z-index: 1000;
+	position:relative;
+	width:100%;
+	height:100%;}
+
+nav ul{
+	position:absolute;
+	top:2rem;
+	right:0;
+	list-style: none;
+	display: table;
+	table-layout: fixed;
+	text-align: center;}
+
+nav li{ 
+	display: table-cell;
+	vertical-align: middle;
+	width:9rem;}
+
+nav li a{
+	display:block;
+	color: #fff;}
+
+i.icon{
+	font-size: 5rem;
+	line-height: 1;}
+
+.text{
+	font-size:2.3rem;
+	line-height:2.5rem;
+	font-weight:400;
+	vertical-align:middle;
+	display:block;}
+
+nav li a:hover{ color:rgba(255,255,255,0.5);}
+
+
+/* =========================
+　スクロールしたときのメニューの設定
+　========================= */
+nav.scroll{
+	position:fixed;
+	top:0;
+	left:0;
+	height:6rem;
+	background-color:#fff;
+	border-bottom:solid 2px #000;
+	box-sizing: content-box;}
+
+nav.scroll h1{
+	font-size:4.3rem;
+	line-height:6rem;
+	margin:0 3rem;}
+
+nav.scroll h1 a{
+	color:#000;}
+	
+nav.scroll ul{
+	position:absolute;
+	top:1rem;
+	right:2rem;}
+
+nav.scroll li{ 
+	width:5rem;}
+	
+nav.scroll li a{
+	height:4rem;
+	width:4rem;
+	background-color:#000;
+	color:#fff;
+	font-size: 2rem;
+	text-align:center;
+	border-radius: 50%;}
+
+nav.scroll li a{ border:solid 2px;}
+
+/* ↓マウスオーバー時の変化などの設定 */
+nav.scroll li a:hover{ transition: all 0.3s ease; background-color:#fff; border:solid 2px #000;}
+nav.scroll li a{ border:none;}
+nav.scroll li a .text{ color:#000;}
+
+/* ↓マウスオーバーでアイコンが文字になる設定 */
+nav.scroll li a i.icon{ display:inline; animation: fadein 0.3s linear 0s 1; font-size: 2.3rem;line-height:4rem;}
+nav.scroll li a:hover i.icon{ display:none; }
+nav.scroll li a span.text{ display:none; }
+nav.scroll li a:hover span.text{ display:inline; animation: fadein 0.3s linear 0s 1;font-size:1.3rem; }
+
+
+/* =========================
+　ここからトップ部分の設定
+　========================= */
+
+#top{
+	width:100%;
+	height:calc(100vh - 26rem) ;　/* 高さ100%から上のヘッダー＋下のプロフ部分の高さを引いてる */
+	height:-webkit-calc(100vh - 26rem) ;}
+	
+#top:before{
+	content:"";
+	display:block;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+	width:100%;
+	height:100vh;
+	background-image:url("../bg.jpg"); /* 背景画像を指定 */
+	background-size:cover; /* 画像サイズは全面を覆うように */
+	background-repeat: no-repeat; }
+
+
+/* =========================
+　ここからインフォ部分の設定
+　========================= */
+
+#info{
+	padding:1.5rem 6rem;
+	height:10rem;}
+
+#me{
+	width:12rem;
+	height:auto;
+	float:left;
+	margin:-4rem 2rem 0 0;
+	background-color:#fff;
+	border-radius:50%;
+	border:solid 8px #fff; }
+
+#prof strong{
+	font-size:2.5rem;
+	line-height:4rem;
+	vertical-align:middle;}
+
+#info .btn{
+	display:inline-block;
+	width:12rem;
+	margin:0 0.5rem;
+	vertical-align:middle;
+	line-height:2.5rem; }
+
+
+
+/* =========================
+　ここからイラスト部分の設定
+　========================= */
+
+div.pic{
+	float:left;
+	width:20%; /* ここの数値で絵のサムネイル並ぶ数変えられる。今は20%だから横に５つ。25%なら４つ… */
+	padding:0.7rem; /* サムネイルまわりの余白 */ 
+	}
+
+.long{
+	padding-bottom: 6rem;}
+	
+#illust{
+	position: relative;}
+
+#illust img{
+	width:100%;
+	height:auto;
+	vertical-align:bottom; }
+	
+/* ↓サムネイルにマウスオーバーでちょっと透ける(opacity＝透明度) */
+#illust img:hover {
+	-webkit-filter: opacity(60%);
+	filter: opacity(60%); }
+	
+/* ↓fancyboxのiframeのサイズ制御用 */
+.fancybox-slide--iframe .fancybox-content{
+	margin: 0 !important;
+	height: 100% !important;
+	max-height: 100% !important;
+	max-width: 125rem !important;}
+
+a.next{
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 2.5rem;
+	line-height: 4rem;
+	letter-spacing: 0.2rem;
+	border:solid 2px #fff;
+	background-color:#fff;
+	color:#dbdbe3; }
+	
+a.next:hover{
+	transition: all 0.3s ease;
+	color:#fff;
+	text-align:center;
+	border:solid 2px #fff;
+	background-color:#dbdbe3;}
+
+
+
+/* =========================
+　ここからオフライン部分の設定
+　========================= */
+
+.event{
+	margin:2rem 0 4rem 0;
+	padding:0 2rem;
+	font-size:1.8rem;
+	line-height:5rem;
+	background-image: repeating-linear-gradient(-45deg, #fff, #fff 6px, #e5e5e9 0, #e5e5e9 8px);}
+
+.event span{
+	font-weight:600;}
+
+
+#off .btn{
+	display:block;
+	margin:2rem 0;
+	width:100%;
+	font-size:1.8rem;
+	line-height:4rem;}
+
+#off .btn .material-icons{
+	margin-right: 1rem;
+	vertical-align: middle;}
+
+.shinkan{
+	width:100%;
+	margin:0 auto 5rem auto;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;}
+
+.shinkan img{
+	margin-right:3rem;
+	width:40rem;}
+
+.shinkan .box{
+	position:relative;}
+
+.new{
+	position:absolute;
+	top:-1rem;
+	right:2rem;
+	width:6rem;
+	height:6rem;
+	background-color:#d8557e;
+	font-size:2rem;
+	line-height:6rem;
+	color:#fff;
+	text-align:center;
+	border-radius:50%;}
+
+.shinkan h3{
+	font-size:3rem;}
+
+.shousai{
+	display:block;}
+	
+.shinkan .shousai{
+	font-size:2rem;
+	line-height:5rem;}
+
+.kikan{
+	width:100%;
+	margin:0 auto;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap; }
+	
+.kikan .shousai{
+	line-height:3rem;}
+	
+.kikan h3{
+	font-size:2.5rem;}
+
+.hon{
+	margin-bottom:3rem;}
+
+ /* 横幅900px以上なら既刊のカラム数が3になるよう%で指定 */
+@media screen and (min-width: 901px) {
+	.hon{ width:31%;}}
+
+ /* 横幅900px以下なら既刊のカラム数が2になるよう%で指定 */
+@media screen and (max-width: 900px) {
+	.hon{ width:48%;}}
+
+.kikan img{
+	width:100%;}	
+
+
+
+
+/* =========================
+　ここからメルフォ部分の設定
+　========================= */
+
+form {
+	width: 100%;
+	margin:-1rem auto 0 auto;}
+	
+form div{
+    margin-top: 1.2rem;}
+    
+label {
+	color:#fff;
+	display:block;
+	padding-bottom:0.3rem;}
+
+input, textarea {
+	padding:0.5rem;
+	border:none; }
+
+input{
+	width:30rem;}
+	
+textarea {
+	width: 100%;
+    height: 15rem;
+	padding:0.5rem;
+    resize: none;
+	font-size:2rem;}
+
+button {
+	padding:1.5rem;
+	margin:0.5rem 0.5rem 0 0;
+	letter-spacing:0.1rem;
+	font-size:1.6rem;
+	border-style: none;
+	background-color:#cfcfcf;}
+
+
+
+/* =========================
+　ここからフッター部分の設定
+　========================= */
+
+footer{
+	padding:2rem;
+	text-align:center;
+	font-size:2rem;
+	letter-spacing:0.2rem;
+	font-weight:400;}

@@ -1,0 +1,71 @@
+/* ↓Googleフォント読み込み */
+@import url(https://fonts.googleapis.com/css?family=M+PLUS+1p:100,300,400,500,700,800,900|Staatliches);
+
+/* ↓62.5%は1rem=10pxにするためですがiPad周辺はサイズ調整のために90%にしています。。。 */
+@media screen and (min-width: 801px) {
+	html{ font-size:62.5%;}}
+@media screen and (max-width: 800px) {
+	html{ font-size:90%;}}
+@media screen and (max-width: 500px) {
+	html{ font-size:62.5%;}}
+
+/* ↓デフォルトのスタイル消したり */
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;}
+
+/* ↓ページ全体の設定 */
+
+html,body{
+	width:100%;
+	height:100%;
+	color:#333;
+	font-family: 'M PLUS 1p','Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;}
+
+/* ↓フォント変える部分 */
+h1,h2,h3,.btn,button,footer,.text,.shousai,.new,.next{
+	font-family: 'Staatliches', cursive; }
+
+/* ↓リンク部分の装飾 */
+a{
+	text-decoration: none;
+	cursor: pointer;
+	color:#000;}
+
+/* ↓背景が暗い部分の文字色まとめて指定 */
+#illust h2,#contact h2,footer,footer a{ color:#fff; }
+
+/* ↓各セクションの背景色 */
+#illust{  background-color: #dbdbe3; }
+#info,#off{    background-color: #fff; }
+#contact{ background-color: rgba(0,0,0,0.4); }
+footer{ background-color: #465f97;}
+
+
+/* ↓各セクションのタイトル */
+h2{
+	text-align:center;
+	color:#dbdbe3;
+	line-height:1;}
+
+
+/* ↓追加で読み込まれた画像のフェードイン */
+.fi{
+	animation-name:fade-in1;
+	animation-duration:1s; //アニメーション時間
+	animation-timing-function: ease-out; //アニメーションさせるイージング
+	animation-delay:0.5s; //アニメーション開始させる時間
+	animation-iteration-count:1; //繰り返し回数}
+
+@keyframes fade-in1 {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+
+/* ↓float解除 */
+.clear::after {
+	content: "";
+	display: table;
+	clear: both;}

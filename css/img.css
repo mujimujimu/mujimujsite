@@ -1,0 +1,38 @@
+html,body{
+	width:100%;
+	font-family: 'Mplus 1p','Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+	font-weight:400;
+	letter-spacing:0.15rem;
+	line-height:1.6;
+	color:#555;}
+
+*{ margin:0; padding:0; box-sizing: border-box;}
+
+body{
+	padding:3rem;}
+
+p{
+	text-align:center;
+	font-size:1.2rem;
+	margin-bottom:2rem;}
+
+#flex{
+	display: -ms-flexbox; /* IE10 */
+	display: -webkit-box; /* Android4.3以下、Safari3.1?6.0 */
+	display: -webkit-flex; /* Safari6.1以降 */
+	display: flex;
+	-ms-flex-flow: row-reverse wrap; /*IE10*/
+	-webkit-flow: row-reverse wrap; /* Safari6.1以降 */
+	flex-flow: row-reverse wrap;
+	max-width:1410px;
+	width: 100%; }
+
+#flex div{
+	width:50%;
+	max-width: 705px;
+	height:auto;}
+
+img {
+	width:100%;
+	height:auto;
+	margin-bottom:3rem;}

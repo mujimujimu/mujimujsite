@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<title>mujimujisite</title>
+
+<!-- ↓スタイルシート読み込み -->
+<link rel="stylesheet" href="css/style.css">
+<!-- ↓ウィンドウサイズによって読み込むcssを切り替える　ブレイクポイントはとりあえず横幅800px -->
+<link rel="stylesheet" media="screen and (min-width: 801px)" href="css/style-pc.css">
+<link rel="stylesheet" media="screen and (max-width: 800px)" href="css/style-mobile.css">
+<!-- ↓アイコンを表示するためのCDN -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- ↓jQueryとかjsファイル読み込み -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/index.js"></script>
+
+<!-- ↓モーダルウィンドウ関連 -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+
+<script src="https://unpkg.com/jscroll/dist/jquery.jscroll.min.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- メニュー -->
+<header>
+	<nav>
+	
+		<h1><a href="#">mujimujisite</a></h1>
+		
+		<ul>
+			<li><a href="#illust"><i class="material-icons icon">panorama</i><span class="text">IMG</span></a></li>
+			<li><a href="#off"><i class="material-icons icon">local_library</i><span class="text">OFF</span></a></li>
+			<!-- <li><a href="#contact"><i class="material-icons icon">mail</i><span class="text">MAIL</span></a></li> -->
+		</ul>
+	</nav>
+</header>
+
+
+<div id="area"><!-- ←ここまでスクロールしたらメニューが上からウニョッて出てくる -->
+
+<!-- トップのエリア -->
+<section id="top"></section>
+
+
+
+<!-- プロフィール -->
+<section id="info" class="clear">
+
+	
+	<img src="img/icon.png" id="me" alt="icon">
+	<div id="prof">
+		<strong>PROFILE：無地</strong>
+	<a href="https://twitter.com/mujimujiyume" class="btn" target="_blank">TWITTER</a>
+	<a href="https://t.co/U8BC2y5TZe?amp=1" class="btn" target="_blank">PIXIV</a>
+		<p class="max">長髪男が好きです</p>
+	</div>
+	
+	
+</section>
+
+
+
+<!-- イラスト -->
+<section id="illust">
+
+	<h2>ILLUST</h2>
+
+	<div class="wrapper clear long">
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a data-fancybox="illust" data-type="iframe" data-src="comic01.html" href="javascript:;"><img src="img/thumbnail/06.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+		<div class="pic"><a href="img/dummy.jpg" data-fancybox="illust"><img src="img/thumbnail/dummy.jpg" alt="説明"></a></div>
+	<a href="img02.html" class="next">more</a>
+	</div>
+
+</section>
+
+
+<!-- オフライン -->
+<section id="off">
+
+	<div class="wrapper">
+
+	<h2>OFFLINE</h2>
+	
+	<p class="event"><span>6/21 サンシャインクリエイション Summer</span>　(スペース未定) だいしゅきほーるでぃんぐす</p>
+	
+	<div class="shinkan">
+		<div class="box"><img src="off/mutsuki.jpg" alt="新刊表紙">
+			<div class="new">NEW</div></div>
+		<div class="box">
+			<h3>快楽に負けるな睦月くん!</h3>
+			<span class="shousai">B5｜22p｜&yen;500</span>
+			睦月くんが電車で、会社で痴漢されます。<br>
+			※R18<br>
+			<a class="btn"><i class="material-icons">shopping_cart</i>BOOTH</a>
+		</div>
+	</div>
+
+
+	<div class="kikan">
+		<div class="hon">
+			<div><img src="off/fujun_1.jpg" alt="既刊1"></div>
+			<div>
+				<h3>本のタイトル</h3>
+				<span class="shousai">B5｜22p｜&yen;500</span>
+				あらすじの文章なにかあらすじの文章なにかあらすじの文章なにか<br>
+				<a class="btn"><i class="material-icons">shopping_cart</i>BOOTH</a>
+			</div>
+		</div>
+		<div class="hon">
+			<div><img src="off/fujun_2.jpg" alt="既刊2"></div>
+			<div>
+				<h3>本のタイトル</h3>
+				<span class="shousai">B5｜18p｜&yen;500</span>
+				あらすじの文章なにかあらすじの文章なにかあらすじの文章なにか<br>
+				<a class="btn"><i class="material-icons">shopping_cart</i>BOOTH</a>
+			</div>
+		</div>
+		<div class="hon">
+			<div><img src="off/kimini.jpeg" alt="既刊3"></div>
+			<div>
+				<h3>本のタイトル</h3>
+				<span class="shousai">B5｜??p｜&yen;500</span>
+				あらすじの文章なにかあらすじの文章なにかあらすじの文章なにか<br>
+				<a class="btn"><i class="material-icons">shopping_cart</i>BOOTH</a>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+
+</section>
+
+
+
+<!-- メールフォーム
+<section id="contact">
+	<div class="wrapper">
+
+	<h2>CONTACT</h2>
+
+	<form name="contact" method="POST" data-netlify="true" action="index.html">
+		<div>
+			<label for="name">Name(任意):</label>
+			<input name="name" type="text" id="name">
+		</div>
+		<div>
+			<label for="msg">Message:</label>
+			<textarea name="message" onclick="this.select()" id="msg"></textarea>
+			<button type="submit">SEND</button>
+			<button type="reset">RESET</button>
+		</div>
+	</form>
+
+	</div>
+</section> -->
+
+
+
+<!-- フッター -->
+<footer>
+	mujimujisite@無地 since2020~
+	
+</footer>
+
+</div>
+
+
+</body>
+</html>
